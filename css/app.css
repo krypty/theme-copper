@@ -1,5 +1,4 @@
 @import url('../../../assets/css/app.css');
-
 @font-face {
     font-family: 'Muli';
     font-style: normal;
@@ -11,8 +10,8 @@ body {
     background-color: #e7a279;
     color: #434343;
     font-family: 'Muli', sans-serif;
-    font-size: 14px;
-    max-width: 800px;
+    font-size: 15px;
+    max-width: 1000px;
     padding-bottom: 20px;
 }
 
@@ -55,16 +54,25 @@ header {
     background: #434343;
 }
 
+.preview-full-content:not(:empty), p.preview:not(:empty) {
+    margin-top: 5px;
+}
+
 .logo {
     color: #CCC;
 }
 
 a.logo {
     margin-left: 8px;
+    font-size: 120%;
 }
 
 a.logo:hover {
     color: #000;
+}
+
+header ul {
+    font-size: 100%;
 }
 
 header li a {
@@ -120,14 +128,26 @@ section.page {
     padding-right: 5px;
 }
 
-
 .page-header h2, .page-section h2 {
-    border-bottom: 1px dotted  #CCC;
+    border-bottom: 1px dotted #CCC;
     font-family: 'Muli', sans-serif;
     font-size: 20px;
     font-weight: normal;
     margin: 0;
     padding: 6px 10px;
+}
+
+ul.item-menu {
+    font-size: 110%;
+}
+
+li.item-menu-title a {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    float: left;
 }
 
 .items article {
@@ -171,12 +191,7 @@ form {
     margin-top: 20px;
 }
 
-input[type='email'],
-input[type='tel'],
-input[type='password'],
-input[type='text'],
-textarea,
-select {
+input[type='email'], input[type='tel'], input[type='password'], input[type='text'], textarea, select {
     -webkit-border-radius: 4px;
     border-radius: 4px;
     border: 1px solid #CCC;
@@ -186,16 +201,14 @@ select {
     font-size: 15px;
 }
 
-input[type='email']:focus,
-input[type='tel']:focus,
-input[type='password']:focus,
-input[type='text']:focus,
-textarea:focus {
+input[type='email']:focus, input[type='tel']:focus, input[type='password']:focus, input[type='text']:focus, textarea:focus {
     border: 1px solid #cf7c4b;
     box-shadow: none;
 }
 
+
 /* alerts */
+
 .alert {
     padding: 8px 35px 8px 14px;
     margin-left: 10px;
@@ -233,6 +246,7 @@ textarea:focus {
 
 
 /* buttons */
+
 .btn {
     -webkit-appearance: none;
     appearance: none;
@@ -259,9 +273,7 @@ a.btn {
     color: #cf7c4b;
 }
 
-a.btn-red:hover,
-.btn-red:hover,
-.btn-red:focus {
+a.btn-red:hover, .btn-red:hover, .btn-red:focus {
     color: #cf7c4b;
     background: #e7a279;
 }
@@ -272,8 +284,7 @@ a.btn-red:hover,
     color: #cf7c4b;
 }
 
-.btn-blue:hover,
-.btn-blue:focus {
+.btn-blue:hover, .btn-blue:focus {
     border-color: #cf7c4b;
     background: #e7a279;
 }
@@ -296,31 +307,31 @@ a.btn-red:hover,
 }
 
 @media only screen and (max-width: 480px) {
-
     body {
         border-left: 1px solid #CCC;
         border-right: 1px solid #CCC;
         padding-bottom: 0;
     }
-
     #login-page {
         border: none;
     }
-
+    a.logo {
+        font-size: 140%;
+    }
     header {
         padding: 0;
         border: none;
     }
-
     header li {
         background-color: #FFF;
     }
-
+    nav ul li, nav a {
+        font-size: 14pt;
+    }
     section.page {
         border: none;
         border-radius: 0;
     }
-
     .item {
         padding-bottom: 0;
         font-family: 'Muli', sans-serif;
